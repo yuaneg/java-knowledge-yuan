@@ -2,6 +2,8 @@ package com.yuan.reflect;
 
 import org.junit.Test;
 
+import com.yuan.reflect.annotation.AnnotationBase;
+
 public class BaseTest {
 	
 	/**
@@ -42,6 +44,7 @@ public class BaseTest {
 	@Test
 	public void annotationValue() throws Exception {
 		TestReflect t = new TestReflect();
-		t.annotationTest();
+		t.annotation(AnnotationBase.class);
+		t.annotation("com.yuan.reflect.annotation.AnnotationBase");
 	}
 }

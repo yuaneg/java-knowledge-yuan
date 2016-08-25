@@ -11,7 +11,7 @@ public class BaseTest {
 	 * @throws InstantiationException 
 	 */
 	@Test
-	public void test() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+	public void getClassName() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
 		TestReflect t = new TestReflect();
 		t.newClass();
 	}
@@ -19,9 +19,29 @@ public class BaseTest {
 	 * 通过反射获取方法名
 	 */
 	@Test
-	public void test2() {
+	public void methodName() {
 		TestReflect t = new TestReflect();
 		t.getMethodName();
 	}
-
+	
+	
+	/**
+	 * 通过反射给字段赋值
+	 * @throws Exception 
+	 */
+	@Test
+	public void value() throws Exception {
+		TestReflect t = new TestReflect();
+		t.initAttributions();
+	}
+	
+	/**
+	 * 通过反射给字段赋值
+	 * @throws Exception 
+	 */
+	@Test
+	public void annotationValue() throws Exception {
+		TestReflect t = new TestReflect();
+		t.annotationTest();
+	}
 }

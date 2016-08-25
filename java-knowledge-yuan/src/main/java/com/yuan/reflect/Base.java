@@ -25,4 +25,11 @@ public class Base {
 		this.age = age;
 	}
 
+	@Override
+	public String toString() {
+		return "Base [name=" + name + ", age=" + age + "]";
+	}
+	
+	
+
 }

@@ -1,6 +1,7 @@
 package com.yuan.reflect;
 
 import com.yuan.reflect.annotation.AnnotationBase;
+import com.yuan.reflect.annotation.AnnotationBase2;
 import com.yuan.reflect.annotation.AnnotationMethod;
 import org.junit.Test;
 
@@ -28,6 +29,7 @@ public class AnnotationTest {
         AnnotationMethod t = new AnnotationMethod();
         t.annotation(AnnotationBase.class);
         t.annotation("com.yuan.reflect.annotation.AnnotationBase");
+        t.annotation(AnnotationBase2.class);
     }
 
 }

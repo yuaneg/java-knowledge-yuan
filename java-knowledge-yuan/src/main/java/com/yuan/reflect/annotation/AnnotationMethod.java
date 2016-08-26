@@ -1,10 +1,8 @@
 package com.yuan.reflect.annotation;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-
 import com.yuan.reflect.base.Base;
-import com.yuan.reflect.annotation.MyValue;
+
+import java.lang.reflect.Field;
 
 public class AnnotationMethod {
 

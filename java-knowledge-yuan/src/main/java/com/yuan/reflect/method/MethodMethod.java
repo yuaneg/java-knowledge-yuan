@@ -9,7 +9,7 @@ import java.lang.reflect.Type;
 public class MethodMethod {
 
     public void initMethodReflect() throws Exception{
-        Class cls = MethodBase.class;
+        Class<?> cls = MethodBase.class;
         //获得方法实例
         Object object= cls.newInstance();
         //获得方法

@@ -6,5 +6,6 @@ public class GenericityTest {
 		Holder<String> holder = new Holder<String>("hello world");
 		Holder<Integer> holder2 = new Holder<Integer>(1);
 		System.out.println(holder.toString()+holder2.toString());
+		
 	}
 }

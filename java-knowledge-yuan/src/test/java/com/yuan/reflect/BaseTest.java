@@ -3,8 +3,6 @@ package com.yuan.reflect;
 import com.yuan.reflect.base.BaseMethod;
 import org.junit.Test;
 
-import com.yuan.reflect.annotation.AnnotationBase;
-
 public class BaseTest {
 
 	/**

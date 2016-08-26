@@ -1,44 +1,20 @@
-package com.yuan.reflect;
+package com.yuan.reflect.annotation;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+import com.yuan.reflect.base.Base;
 import com.yuan.reflect.annotation.MyValue;
 
-public class TestReflect {
-	/**
-	 * 通过反射的机制创建对象
-	 * 
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
-	 * @throws ClassNotFoundException
-	 */
-	public void newClass() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
-		Class<?> cls = Class.forName("com.yuan.reflect.Base");
-		System.out.println(cls.getSimpleName());
-		// 对象创建
-		Base base = (Base) cls.newInstance();
-		base.method();
-	}
-
-	/**
-	 * 通过反射获取方法名
-	 */
-	public void getMethodName() {
-		Class<?> cls = Base.class;
-		Method[] method = cls.getMethods();
-		for (Method m : method) {
-			System.out.println(m.getName());
-		}
-	}
+public class AnnotationMethod {
 
 	/**
 	 * 通过反射给字段赋值
-	 * 
+	 *
 	 * @throws Exception
 	 */
 	public void initAttributions() throws Exception {
-		Class<?> cls = Class.forName("com.yuan.reflect.Base");
+		Class<?> cls = Class.forName("com.yuan.reflect.base.Base");
 		Base base = (Base) cls.newInstance();
 		Field field = cls.getDeclaredField("name");
 		// 暴力访问私有属性
@@ -53,10 +29,10 @@ public class TestReflect {
 
 	/**
 	 * 通过反射 读取注解给字段赋值
-	 * 
+	 *
 	 * @throws Exception
 	 */
-	public void annotationTest(Class<?> cls) throws Exception {
+	private void annotationTest(Class<?> cls) throws Exception {
 		Object obj = cls.newInstance();
 		Field[] fields = cls.getDeclaredFields();
 		for (Field field : fields) {
@@ -104,11 +80,13 @@ public class TestReflect {
 		}
 		System.out.println(obj.toString());
 	}
-	
+
 	public void annotation(Class<?> cls) throws Exception{
 		annotationTest(cls);
 	}
 	public void annotation(String name) throws Exception {
 		annotationTest(Class.forName(name));
 	}
+
+
 }

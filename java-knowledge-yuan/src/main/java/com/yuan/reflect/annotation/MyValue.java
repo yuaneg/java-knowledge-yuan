@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 
 @Documented
 @Inherited
-@Target(value = ElementType.FIELD)
+@Target(value = {ElementType.FIELD,ElementType.PARAMETER,ElementType.METHOD} )
 @Retention(RetentionPolicy.RUNTIME)
 public @interface MyValue {
 

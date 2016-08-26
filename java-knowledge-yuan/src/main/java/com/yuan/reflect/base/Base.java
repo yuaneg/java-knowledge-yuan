@@ -1,4 +1,4 @@
-package com.yuan.reflect;
+package com.yuan.reflect.base;
 
 public class Base {
 

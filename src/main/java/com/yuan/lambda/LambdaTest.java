@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
+/** lambda
  * Created by 袁恩光 on 2017/4/19.
  */
 public class LambdaTest {
@@ -15,8 +15,8 @@ public class LambdaTest {
         map.put("name", "yuaneg");
         map.put("gender", "男");
         map.put("age", "18");
-        map.forEach((K, V) -> {
-            if (K.toString().equals("gender")) {
+        map.forEach((String K, Object V) -> {
+            if (K.equals("gender")) {
                 System.out.println(V);
             }
         });
@@ -25,9 +25,10 @@ public class LambdaTest {
         list.add("name");
         list.add("gender");
         list.add("age");
-        list.forEach((value) -> {
+/*        list.forEach((String value) -> {
             System.out.println(value);
-        });
+        });*/
+        list.forEach(value -> System.out.println(value));
     }
 
 

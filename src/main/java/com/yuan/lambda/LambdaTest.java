@@ -25,9 +25,9 @@ public class LambdaTest {
         list.add("name");
         list.add("gender");
         list.add("age");
-/*        list.forEach((String value) -> {
+        list.forEach((String value) -> {
             System.out.println(value);
-        });*/
+        });
         list.forEach(value -> System.out.println(value));
     }
 
